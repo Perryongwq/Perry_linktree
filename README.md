@@ -4,12 +4,11 @@ A modern, responsive portfolio website built with **React**, **TypeScript**, and
 
 ## Table of Contents
 1. [Features](#features)
-2. [Demo](#demo)
-3. [Project Structure](#project-structure)
-4. [Technologies Used](#technologies-used)
-5. [Customization](#customization)
-6. [License](#license)
-7. [Acknowledgements](#acknowledgements)
+2. [Project Structure](#project-structure)
+3. [Technologies Used](#technologies-used)
+4. [Customization](#customization)
+5. [License](#license)
+6. [Acknowledgements](#acknowledgements)
 
 ---
 
@@ -32,18 +31,8 @@ A modern, responsive portfolio website built with **React**, **TypeScript**, and
 
 ---
 
-## Demo
-If you have deployed the application, include a live link here:  
-[Live Demo](https://your-portfolio-link.com)
-
-Alternatively, share a screenshot to showcase the website’s appearance:
-
-```markdown
-![Portfolio Screenshot](screenshot.png)
-
-
 ## Project Structure
-```plaintext
+```
 .
 ├── app.tsx                  # Main application component, including layout and page content.
 ├── components
@@ -54,7 +43,7 @@ Alternatively, share a screenshot to showcase the website’s appearance:
 ├── main.tsx                 # Entry point for the React application.
 ├── index.css                # Global styles and Tailwind CSS configuration.
 └── README.md                # Project documentation.
-
+```
 
 ## Technologies Used
 - **React** – A JavaScript library for building user interfaces.
