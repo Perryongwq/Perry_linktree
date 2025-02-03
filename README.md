@@ -1,76 +1,85 @@
 # Portfolio Website
 
-A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. This project showcases a real-time clock widget, custom interactive buttons, and links to your portfolio, LinkedIn, and GitHub profiles. The site features a stylish overlay on a background image, complete with smooth transitions and a clean, modern design.
+A modern, responsive portfolio website built with **React**, **TypeScript**, and **Tailwind CSS**. This project showcases a real-time clock widget, custom interactive buttons, and links to your portfolio, LinkedIn, and GitHub profiles. It features a stylish overlay on a background image, smooth transitions, and a clean, modern design.
+
+## Table of Contents
+1. [Features](#features)
+2. [Demo](#demo)
+3. [Project Structure](#project-structure)
+4. [Technologies Used](#technologies-used)
+5. [Customization](#customization)
+6. [License](#license)
+7. [Acknowledgements](#acknowledgements)
+
+---
 
 ## Features
 
-- **Responsive Design:** Fully responsive layout using Tailwind CSS.
-- **Real-Time Clock Widget:** Displays the current time with an updated clock icon and a full white background for clear visibility.
-- **Custom Button Components:** Reusable button component built with Radix UI's Slot and enhanced styling via class variance.
-- **Interactive Links:** Smooth hover transitions on links to external profiles and portfolio.
-- **Modern Tech Stack:** Built using React, TypeScript, and Tailwind CSS with additional utilities such as class-variance-authority and tailwind-merge.
+- **Responsive Design**  
+  The layout is fully responsive, ensuring an optimal viewing experience across a wide range of devices using Tailwind CSS.
+
+- **Real-Time Clock Widget**  
+  Displays the current time with a clock icon and a white background for clarity.
+
+- **Custom Button Components**  
+  Built with Radix UI's Slot API and class variance for reusable and flexible button styling.
+
+- **Interactive Links**  
+  Smooth hover transitions for external profiles and portfolio links.
+
+- **Modern Tech Stack**  
+  Leveraging React, TypeScript, and Tailwind CSS with additional utility libraries like `class-variance-authority` and `tailwind-merge`.
+
+---
 
 ## Demo
+If you have deployed the application, include a live link here:  
+[Live Demo](https://your-portfolio-link.com)
 
-*(If applicable, include a link or a screenshot of your deployed application.)*
+Alternatively, share a screenshot to showcase the website’s appearance:
 
-## Installation
+```markdown
+![Portfolio Screenshot](screenshot.png)
 
-Follow these steps to set up the project on your local machine.
 
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/portfolio.git\
-cd portfolio
-npm install
-npm run dev
-
+## Project Structure
+```plaintext
 .
-├── app.tsx                  # Main application component with layout and page content.
+├── app.tsx                  # Main application component, including layout and page content.
 ├── components
 │   └── ui
 │       └── button.tsx       # Custom Button component with variant and size configurations.
 ├── lib
-│   └── utils.ts             # Utility functions (e.g., class name merging with tailwind-merge).
+│   └── utils.ts             # Utility functions (e.g., class name merging using tailwind-merge).
 ├── main.tsx                 # Entry point for the React application.
 ├── index.css                # Global styles and Tailwind CSS configuration.
 └── README.md                # Project documentation.
 
-Technologies Used
 
-This project is built with the following technologies:
+## Technologies Used
+- **React** – A JavaScript library for building user interfaces.
+- **TypeScript** – A strongly typed superset of JavaScript.
+- **Tailwind CSS** – A utility-first CSS framework for rapid UI development.
+- **Radix UI** – Accessible UI primitives for React applications.
+- **Lucide React** – A set of beautifully crafted, open-source icons.
+- **Class Variance Authority** – Manages variant-based styling.
+- **Tailwind Merge** – Intelligent class merging for Tailwind CSS.
 
-React - JavaScript library for building user interfaces.
+## Customization
+You can easily adapt the website to your preferences:
 
-TypeScript - Strongly typed programming language for JavaScript.
+### Clock Widget
+Change the background color, icon size, and layout in the `ClockWidget` component.
 
-Tailwind CSS - Utility-first CSS framework for rapid UI development.
+### Buttons
+Update button styles, variants, and sizes in `components/ui/button.tsx` to match your brand or design.
 
-Radix UI - Accessible UI primitives for React applications.
+### Overlay & Background
+Modify the background image and overlay settings in `app.tsx` and `index.css`.
 
-Lucide React - A set of beautifully crafted open-source icons.
+## License
+This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute this software in accordance with the license terms.
 
-Class Variance Authority - Variant-based styling.
-
-Tailwind Merge - Intelligent class merging for Tailwind CSS.
-
-Customization
-
-You can easily customize various aspects of the application:
-
-Clock Widget: Modify the background color, padding, and icon size in the ClockWidget component.
-
-Buttons: Adjust button styles and variants in components/ui/button.tsx to match your design requirements.
-
-Overlay & Background: The background image and overlay can be customized in app.tsx and index.css.
-
-License
-
-This project is licensed under the MIT License.
-
-Acknowledgements
-
-Artwork: Background image credited to @vince19visuals.
-
-Open Source Libraries: Thanks to the contributors of the open-source libraries and tools used in this project.
+## Acknowledgements
+- **Artwork**: Background image credited to [@vince19visuals](https://unsplash.com/@vince19visuals).
+- **Open Source Libraries**: Thanks to the contributors of the open-source libraries and tools used in this project.
