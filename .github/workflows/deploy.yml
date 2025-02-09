@@ -1,0 +1,55 @@
+name: CI/CD for LinkTree
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v3
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      # Install dependencies (for testing)
+      - name: Install
+        run: npm install
+
+      # Run tests (assuming you have a test script in package.json)
+      - name: Run tests
+        run: npm test
+
+      # (Optional) If you have a build step, run it here, e.g.:
+      # - name: Build
+      #   run: npm run build
+      
+      # Upload site files to an artifact if tests pass
+      # If your site is in the root directory, set path: '.' or specify your build folder
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        if: success()  # Only upload if all previous steps succeeded
+        with:
+          path: '.'
+
+  deploy:
+    # This job runs only after the build-and-test job succeeds
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write       # Required to deploy to Pages
+      id-token: write    # Required for OpenID Connect
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
+        with:
+          # Typically no extra config needed for basic static site
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
