@@ -20,7 +20,7 @@ jobs:
           node-version: '16'
 
       # Install dependencies (for testing)
-      - name: Install
+      - name: Install dependencies
         run: npm install
 
       # Run tests (assuming you have a test script in package.json)
@@ -31,11 +31,9 @@ jobs:
       # - name: Build
       #   run: npm run build
       
-      # Upload site files to an artifact if tests pass
-      # If your site is in the root directory, set path: '.' or specify your build folder
-      - name: Upload artifact
+      # Upload site files as an artifact for deployment
+      - name: Upload artifact for Pages
         uses: actions/upload-pages-artifact@v1
-        if: success()  # Only upload if all previous steps succeeded
         with:
           path: '.'
 
@@ -49,7 +47,5 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
-        with:
-          # Typically no extra config needed for basic static site
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
